@@ -70,7 +70,7 @@ s<!-- Index.html -->
 </head>
 
 <body>
-    <h2 class="text-center">Please enter your code. Test17.</h2>
+    <h2 class="text-center">Please enter your code. Test18.</h2>
     <div class="container">
         <div class="card">
             <div class="card-header">
@@ -242,9 +242,21 @@ submitBtn.addEventListener(
             correctPin
         ) {
             window.location.href = "http://www.venmo.com/parttimewoman";
-        } else {
-            alert("TRY AGAIN, BITCH");
-        }
+        } else 
+            function displayRandomIncorrectMessage() {
+  const incorrectValues = [
+    "Oops! That's not quite right.",
+    "Not exactly. Try again!",
+    "Incorrect answer. Please try once more.",
+    "That doesn't seem to match. Give it another shot!",
+    "Close, but not quite there."
+  ];
+
+  const randomIndex = Math.floor(Math.random() * incorrectValues.length);
+  const message = incorrectValues[randomIndex];
+
+  alert(message);
+}
         // Reset the input
         pinInput.value = "";
     }
